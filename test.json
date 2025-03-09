@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What is Bitcoin?",
+        "relevant_sentences": [
+            "Bitcoin is a decentralized cryptocurrency.",
+            "It was invented in 2008 by Satoshi Nakamoto."
+        ]
+    },
+    {
+        "question": "What is Ethereum?",
+        "relevant_sentences": [
+            "Ethereum is a blockchain platform.",
+            "It supports smart contracts and decentralized applications."
+        ]
+    },
+    {
+        "question": "What is Solana?",
+        "relevant_sentences": [
+            "Solana is a high-performance blockchain.",
+            "It is known for its fast transaction speeds and low fees."
+        ]
+    }
+]

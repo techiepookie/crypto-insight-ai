@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Insight AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #76C7C0;  /* Soft teal */
+            --background: #1A202C;
+            --surface: #2D3748;
+            --text: #E2E8F0;
+            --accent: #9AB3C5;  /* Muted blue */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: linear-gradient(45deg, #0a0a1a 0%, #1A202C 100%);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 1.2rem;
+            background: var(--surface);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 12px rgba(118, 199, 192, 0.15);
+        }
+
+        button {
+            padding: 1.2rem 2.5rem;
+            background: var(--primary);
+            color: var(--background);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(118, 199, 192, 0.2);
+        }
+
+        .answer {
+            background: var(--surface);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: slideUp 0.4s ease forwards;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .insight-card {
+            background: rgba(118, 199, 192, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--primary);
+        }
+
+        .insight-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: var(--surface);
+            margin: 2px;
+            font-size: 0.9rem;
+        }
+
+        .star-loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .stars-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .star {
+            font-size: 2rem;
+            color: var(--accent);
+            animation: twinkle 1.5s infinite;
+            opacity: 0.8;
+        }
+
+        .loading-text {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.1rem;
+            height: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loading-message {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            animation: textFade 3.6s infinite;
+        }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { transform: scale(1); opacity: 0.4; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+
+        @keyframes textFade {
+            0%, 20% { opacity: 0; transform: translateY(10px); }
+            25%, 45% { opacity: 1; transform: translateY(0); }
+            50%, 100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            .input-group {
+                flex-direction: column;
+            }
+            input, button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Crypto Insight AI</h1>
+            <p>Advanced Blockchain Intelligence Platform</p>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="questionInput" placeholder="Ask about crypto markets, blockchain tech, or trends...">
+            <button onclick="askQuestion()">Analyze</button>
+        </div>
+
+        <div id="answersContainer"></div>
+    </div>
+
+    <script>
+        function askQuestion() {
+            const question = document.getElementById('questionInput').value;
+            const answersContainer = document.getElementById('answersContainer');
+            
+            if (!question) {
+                answersContainer.innerHTML = `<div class="answer">Please enter a question to analyze</div>`;
+                return;
+            }
+
+            // Show animated loader
+            answersContainer.innerHTML = `
+                <div class="star-loader">
+                    <div class="stars-container">
+                        <div class="star" style="animation-delay: 0s">✦</div>
+                        <div class="star" style="animation-delay: 0.2s">✦</div>
+                        <div class="star" style="animation-delay: 0.4s">✦</div>
+                    </div>
+                    <div class="loading-text">
+                        <div class="loading-message" style="animation-delay: 0s">Generating insights...</div>
+                        <div class="loading-message" style="animation-delay: 1.2s">Analyzing blockchain data...</div>
+                        <div class="loading-message" style="animation-delay: 2.4s">Compiling results...</div>
+                    </div>
+                </div>`;
+
+            fetch('http://localhost:5000/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question })
+            })
+            .then(response => response.json())
+            .then(data => {
+                answersContainer.innerHTML = data.answers?.length > 0 
+                    ? `
+                        <div class="insight-card">
+                            <h3>Key Insights</h3>
+                            <p>Overall Sentiment: ${data.insights.average_sentiment.toFixed(2)}
+                                </p>
+                                ${data.insights.average_sentiment < 0.05 ? '<p>*The answer might be inappropriate because of low train data set.*</p>' : ''}
+                            
+                            ${Object.entries(data.insights.entities).map(([key, values]) => `
+                                <p>${key}: 
+                                    ${values.map(v => `<span class="insight-badge">${v}</span>`).join('')}
+                                </p>
+                            `).join('')}
+                            
+                            ${data.insights.trends.length ? `
+                                <p>Detected Trends: 
+                                    ${data.insights.trends.map(t => `<span class="insight-badge">${t}</span>`).join('')}
+                                </p>
+                            ` : ''}
+                        </div>
+                        
+                        ${data.answers.map((ans, i) => `
+                            <div class="answer" style="animation-delay: ${i*0.1}s">
+                                <strong>Insight ${i+1}:</strong> ${ans}
+                            </div>`).join('')}
+                    `
+                    : `<div class="answer">No relevant insights found</div>`;
+            })
+            .catch(() => {
+                answersContainer.innerHTML = `<div class="answer">Connection error - please try again</div>`;
+            });
+        }
+    </script>
+</body>
+</html>
