@@ -1,20 +1,13 @@
-from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS
+# qa_system.py
 import pdfplumber
 import nltk
 import string
 import numpy as np
 from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import sent_tokenize
 from rank_bm25 import BM25Okapi
 from textblob import TextBlob
 from collections import defaultdict
-
-# Initialize Flask app
-def create_app():
-    app = Flask(__name__)
-    CORS(app)
 
 # Download NLTK resources
 nltk.download('punkt')
@@ -36,6 +29,7 @@ def extract_text_from_pdf(*pdf_paths):
         except Exception as e:
             print(f"Error processing {pdf_path}: {e}")
     return text
+
 class TextPreprocessor:
     def __init__(self):
         self.lemmatizer = WordNetLemmatizer()
@@ -66,10 +60,10 @@ class EnhancedCryptoQA:
             pdf_files = [
                 'crypto_news_1.pdf',
                 'crypto_news_2.pdf',
-                
                 # Add more PDFs here
             ]
-             #Extract and combine text from all PDFs
+            
+            # Extract and combine text from all PDFs
             raw_text = extract_text_from_pdf(*pdf_files)
             cleaned_text = self.preprocessor.clean_text(raw_text)
             self.sentences = tokenize_sentences(cleaned_text)
@@ -89,9 +83,6 @@ class EnhancedCryptoQA:
         tokenized_sentences = [sentence.split() for sentence in self.sentences]
         self.bm25_index = BM25Okapi(tokenized_sentences)
         print("BM25 index created successfully")
-    def create_index(self):
-        tokenized_sentences = [sentence.split() for sentence in self.sentences]
-        self.bm25_index = BM25Okapi(tokenized_sentences)
 
     def get_answers(self, question):
         query = self.preprocessor.clean_text(question).split()
@@ -107,8 +98,8 @@ class EnhancedCryptoQA:
     def extract_entities(self, text):
         """Basic entity extraction (custom implementation)"""
         entities = {
-            'cryptos': {'bitcoin', 'ethereum', 'solana', 'cardano','dogecoin'},
-            'companies': {'coinbase', 'binance', 'kraken','uniswap','chainlink'}
+            'cryptos': {'bitcoin', 'ethereum', 'solana', 'cardano', 'dogecoin'},
+            'companies': {'coinbase', 'binance', 'kraken', 'uniswap', 'chainlink'}
         }
         
         found = {
@@ -164,28 +155,3 @@ class EnhancedCryptoQA:
         insights['trends'] = list(set(insights['trends']))
         
         return insights
-
-# Initialize QA system
-qa_system = EnhancedCryptoQA()
-
-# Flask routes
-@app.route('/')
-    def home():
-        return render_template('index.html')
-
-    # API endpoint
-    @app.route('/ask', methods=['POST'])
-    def ask():
-        question = request.json.get('question', '')
-        answers = qa_system.get_answers(question)
-        insights = qa_system.generate_insights(answers)
-        return jsonify({
-            "answers": answers,
-            "insights": insights
-        })
-
-    return app
-    
-
-if __name__ == '__main__':
-    app.run(debug=True)
