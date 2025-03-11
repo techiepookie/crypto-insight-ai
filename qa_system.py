@@ -169,11 +169,7 @@ class EnhancedCryptoQA:
 qa_system = EnhancedCryptoQA()
 
 # Flask routes
- Initialize QA system
-    qa_system = EnhancedCryptoQA()
-
-    # Serve the frontend
-    @app.route('/')
+@app.route('/')
     def home():
         return render_template('index.html')
 
