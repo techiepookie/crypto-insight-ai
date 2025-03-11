@@ -1,0 +1,8 @@
+flask==3.0.2
+flask_cors==4.0.0
+pdfplumber==0.10.3
+nltk==3.8.1
+numpy==1.26.2
+rank_bm25==0.2.2
+textblob==0.17.1
+gunicorn==21.2.0
