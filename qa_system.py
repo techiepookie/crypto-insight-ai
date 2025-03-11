@@ -169,27 +169,26 @@ class EnhancedCryptoQA:
 qa_system = EnhancedCryptoQA()
 
 # Flask routes
-@app.route('/')
-def home():
-    return render_template('index.html')
+ Initialize QA system
+    qa_system = EnhancedCryptoQA()
 
-@app.route('/ask', methods=['POST'])
-def ask():
-    question = request.json.get('question', '')
-    answers = qa_system.get_answers(question)
-    insights = qa_system.generate_insights(answers)
-    
-    if insights['average_sentiment'] < 0.05:  # Low confidence threshold  
-        return jsonify({
-            "answers": answers,
-            "insights": insights,
-            "message": "The answer might be inappropriate because of low training data. Please ask another question."
-        })
-    else:
+    # Serve the frontend
+    @app.route('/')
+    def home():
+        return render_template('index.html')
+
+    # API endpoint
+    @app.route('/ask', methods=['POST'])
+    def ask():
+        question = request.json.get('question', '')
+        answers = qa_system.get_answers(question)
+        insights = qa_system.generate_insights(answers)
         return jsonify({
             "answers": answers,
             "insights": insights
         })
+
+    return app
     
 
 if __name__ == '__main__':
