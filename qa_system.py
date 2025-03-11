@@ -12,8 +12,9 @@ from textblob import TextBlob
 from collections import defaultdict
 
 # Initialize Flask app
-app = Flask(__name__)
-CORS(app)  # Enable CORS
+def create_app():
+    app = Flask(__name__)
+    CORS(app)
 
 # Download NLTK resources
 nltk.download('punkt')
