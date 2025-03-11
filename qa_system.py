@@ -66,10 +66,7 @@ class EnhancedCryptoQA:
             pdf_files = [
                 'crypto_news_1.pdf',
                 'crypto_news_2.pdf',
-                'dogecoin_report.pdf',
-                'ethereum_whitepaper.pdf',
-                'bitcoin_analysis.pdf',
-                'solana_overview.pdf',
+                
                 # Add more PDFs here
             ]
              #Extract and combine text from all PDFs
