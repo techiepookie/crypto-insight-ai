@@ -4,6 +4,7 @@ import nltk
 import string
 import numpy as np
 from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer  # Import WordNetLemmatizer
 from nltk.tokenize import sent_tokenize
 from rank_bm25 import BM25Okapi
 from textblob import TextBlob
@@ -32,7 +33,7 @@ def extract_text_from_pdf(*pdf_paths):
 
 class TextPreprocessor:
     def __init__(self):
-        self.lemmatizer = WordNetLemmatizer()
+        self.lemmatizer = WordNetLemmatizer()  # Initialize WordNetLemmatizer
         self.stop_words = set(stopwords.words('english'))
         self.stop_words.update({'crypto', 'bitcoin', 'blockchain', 'solana'})
 
