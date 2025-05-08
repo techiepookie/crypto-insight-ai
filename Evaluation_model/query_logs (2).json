@@ -1,0 +1,1236 @@
+[
+    {
+        "timestamp": "2025-04-09T00:04:19.530114",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": []
+    },
+    {
+        "timestamp": "2025-04-09T00:04:47.992848",
+        "coin": "dogecoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": []
+    },
+    {
+        "timestamp": "2025-04-09T00:15:53.530365",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T00:31:19.667793",
+        "coin": "ethereum",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T00:35:31.778344",
+        "coin": "dogecoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T00:42:46.192812",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T00:45:51.480395",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T00:51:03.364118",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T00:56:45.536614",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T01:03:46.443414",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T01:05:12.508507",
+        "coin": "general crypto",
+        "query": "what is bitcoin",
+        "sentiment": "Neutral (Score: 0.35)",
+        "answers": [
+            {
+                "text": "Bitcoin Cash (BCH) and Bitcoin\nSV are the top two alternative investments to Bitcoin since they emerged from the original Bitcoin source code.",
+                "score": 1.8735
+            },
+            {
+                "text": "Bitcoin Cash (BCH) is a form of cryptocurrency very similar to Bitcoin.",
+                "score": 1.8102
+            },
+            {
+                "text": "Bitcoin in Today\u00e2\u20ac\u2122s Market At the time of writing, Bitcoin trades at $80,378.74, down 2.51% in 24\nhours.",
+                "score": 1.7591
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T01:09:02.112518",
+        "coin": "dogecoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T01:09:34.157330",
+        "coin": "bitcoin",
+        "query": "why is bitcoin",
+        "sentiment": "Neutral (Score: 0.35)",
+        "answers": [
+            {
+                "text": "Bitcoin Cash (BCH) and Bitcoin\nSV are the top two alternative investments to Bitcoin since they emerged from the original Bitcoin source code.",
+                "score": 1.8735
+            },
+            {
+                "text": "Bitcoin Cash (BCH) is a form of cryptocurrency very similar to Bitcoin.",
+                "score": 1.8102
+            },
+            {
+                "text": "Bitcoin in Today\u00e2\u20ac\u2122s Market At the time of writing, Bitcoin trades at $80,378.74, down 2.51% in 24\nhours.",
+                "score": 1.7591
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T01:28:40.955589",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T12:32:21.000820",
+        "coin": "general crypto",
+        "query": "what is crypto currency?",
+        "sentiment": "Neutral (Score: 0.24)",
+        "answers": [
+            {
+                "text": "Launched in 2009 by\nthe pseudonymous Satoshi Nakamoto, Bitcoin introduced the world to decentralized digital currency.",
+                "score": 5.3777
+            },
+            {
+                "text": "Bitcoin received\nstrong endorsement from Salina who invested most of his wealth into this decentralized form of currency.",
+                "score": 5.3777
+            },
+            {
+                "text": "Bitcoin: The Pioneer of Cryptocurrency Bitcoin\u00e2\u20ac\u2122s creation in 2009 by Satoshi Nakamoto marked the beginning of decentralized digital\ncurrency.",
+                "score": 4.9915
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T12:32:42.360569",
+        "coin": "general crypto",
+        "query": "what is crypto currency?",
+        "sentiment": "Neutral (Score: 0.24)",
+        "answers": [
+            {
+                "text": "Launched in 2009 by\nthe pseudonymous Satoshi Nakamoto, Bitcoin introduced the world to decentralized digital currency.",
+                "score": 5.3777
+            },
+            {
+                "text": "Bitcoin received\nstrong endorsement from Salina who invested most of his wealth into this decentralized form of currency.",
+                "score": 5.3777
+            },
+            {
+                "text": "Bitcoin: The Pioneer of Cryptocurrency Bitcoin\u00e2\u20ac\u2122s creation in 2009 by Satoshi Nakamoto marked the beginning of decentralized digital\ncurrency.",
+                "score": 4.9915
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T12:33:08.256829",
+        "coin": "bitcoin",
+        "query": "what is bitcoin",
+        "sentiment": "Neutral (Score: 0.35)",
+        "answers": [
+            {
+                "text": "Bitcoin Cash (BCH) and Bitcoin\nSV are the top two alternative investments to Bitcoin since they emerged from the original Bitcoin source code.",
+                "score": 1.8735
+            },
+            {
+                "text": "Bitcoin Cash (BCH) is a form of cryptocurrency very similar to Bitcoin.",
+                "score": 1.8102
+            },
+            {
+                "text": "Bitcoin in Today\u00e2\u20ac\u2122s Market At the time of writing, Bitcoin trades at $80,378.74, down 2.51% in 24\nhours.",
+                "score": 1.7591
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T12:33:24.120712",
+        "coin": "bitcoin",
+        "query": "how to trade in bitcoin",
+        "sentiment": "Neutral (Score: 0.31)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 7.533
+            },
+            {
+                "text": "Bitcoin in Today\u00e2\u20ac\u2122s Market At the time of writing, Bitcoin trades at $80,378.74, down 2.51% in 24\nhours.",
+                "score": 6.724
+            },
+            {
+                "text": "This caused Bitcoin to trade at the\nborder of $82K-$83K levels, after struggling to hold the $83K support.",
+                "score": 5.7844
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T12:48:09.949820",
+        "coin": "ethereum",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T14:38:52.651987",
+        "coin": "cardano",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:01:46.868009",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:07:48.899842",
+        "coin": "solana",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:10:12.942977",
+        "coin": "solana",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:11:36.657009",
+        "coin": "dogecoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:12:40.057073",
+        "coin": "dogecoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:12:53.138573",
+        "coin": "general crypto",
+        "query": "price",
+        "sentiment": "Neutral (Score: 0.36)",
+        "answers": [
+            {
+                "text": "| Year | Bullish Price | Bearish Price | | Bitcoin Cash (BCH) Price Prediction 2026 | $2000 | $130 | | Bitcoin Cash\n(BCH) Price Prediction 2027 | $2500 | $120 | | Bitcoin Cash (BCH) Price Prediction 2028 | $3000 | $110 | | Bitcoin Cash (BCH) Price\nPrediction 2029 | $3500 | $100 | | Bitcoin Cash (BCH) Price Prediction 2030 | $4000 | $90 | Conclusion If Bitcoin Cash (BCH) establishes itself\nas a good investment in 2025, this year would be favorable to the cryptocurrency.",
+                "score": 3.2695
+            },
+            {
+                "text": "Bitcoin\u00e2\u20ac\u2122s price spiked by a phenomenal 5.48% yesterday, with the price opening at\n$78,599 and touching a high of $83,568.",
+                "score": 3.2359
+            },
+            {
+                "text": "Bitcoin\u2019s\nprice spiked by a phenomenal 5.48% yesterday, with the price opening at $78,599 and touching\na high of $83,568.",
+                "score": 3.2359
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:18:05.584518",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:18:23.079484",
+        "coin": "ethereum",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:23:26.398210",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:27:03.152862",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:27:30.418872",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:33:25.486619",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:34:15.621609",
+        "coin": "dogecoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:34:25.918479",
+        "coin": "dogecoin",
+        "query": "price",
+        "sentiment": "Neutral (Score: 0.36)",
+        "answers": [
+            {
+                "text": "| Year | Bullish Price | Bearish Price | | Bitcoin Cash (BCH) Price Prediction 2026 | $2000 | $130 | | Bitcoin Cash\n(BCH) Price Prediction 2027 | $2500 | $120 | | Bitcoin Cash (BCH) Price Prediction 2028 | $3000 | $110 | | Bitcoin Cash (BCH) Price\nPrediction 2029 | $3500 | $100 | | Bitcoin Cash (BCH) Price Prediction 2030 | $4000 | $90 | Conclusion If Bitcoin Cash (BCH) establishes itself\nas a good investment in 2025, this year would be favorable to the cryptocurrency.",
+                "score": 3.2695
+            },
+            {
+                "text": "Bitcoin\u00e2\u20ac\u2122s price spiked by a phenomenal 5.48% yesterday, with the price opening at\n$78,599 and touching a high of $83,568.",
+                "score": 3.2359
+            },
+            {
+                "text": "Bitcoin\u2019s\nprice spiked by a phenomenal 5.48% yesterday, with the price opening at $78,599 and touching\na high of $83,568.",
+                "score": 3.2359
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:42:18.470758",
+        "coin": "dogecoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:44:58.689755",
+        "coin": "ethereum",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T15:47:23.952130",
+        "coin": "ethereum",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T18:21:29.406178",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T19:24:06.401828",
+        "coin": "solana",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T19:34:24.908196",
+        "coin": "hamstercoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T22:16:28.341491",
+        "coin": "ethereum",
+        "query": "Can I trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T22:16:36.511480",
+        "coin": "bitcoin",
+        "query": "Can I trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T22:17:35.750460",
+        "coin": "dogecoin",
+        "query": "What is the future of Dogecoin?",
+        "sentiment": "Neutral (Score: 0.29)",
+        "answers": [
+            {
+                "text": "Simultaneously,\nHouse of Doge and Dogecoin Foundation Unveil Board-Elect, Advisors and Global Dogecoin\nAdoption Plans House of Doge and Dogecoin Foundation Unveil Board-Elect, Advisors and\nGlobal Dogecoin Adoption Plans Dogecoin Eyes $0.25 as On-Chain Activity Surges 400% The\nleading memecoin, Dogecoin\u2019s (DOGE) current trading value stands at $0.1726 with a 0.96%\nrise from its initial 24-hour start price.",
+                "score": 6.9122
+            },
+            {
+                "text": "Even Solana and Dogecoin prices increased by only 2.74% and 3.24% respectively.",
+                "score": 6.5142
+            },
+            {
+                "text": "Dogecoin (DOGE) Primed for a Massive Rebound To $0.6, Analysts Say Dogecoin\n(DOGE) is showing signs of a potential breakout, with analysts highlighting bullish technical\npatterns and growing on-chain activity.",
+                "score": 5.8843
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-09T22:21:38.191455",
+        "coin": "bitcoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-13T23:19:07.665548",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-13T23:19:16.392006",
+        "coin": "bitcoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-13T23:19:20.924321",
+        "coin": "ethereum",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-13T23:19:26.267946",
+        "coin": "ethereum",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T18:30:14.603934",
+        "coin": "dogecoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T19:34:26.262120",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T19:51:16.805599",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T19:53:56.430872",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T20:35:10.273861",
+        "coin": "general crypto",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T20:46:03.358714",
+        "coin": "general crypto",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T20:46:10.889196",
+        "coin": "ethereum",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T20:46:21.877427",
+        "coin": "hamstercoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T21:21:15.096721",
+        "coin": "hamstercoin",
+        "query": "trends",
+        "sentiment": "Neutral (Score: 0.33)",
+        "answers": [
+            {
+                "text": "This further acts as a catalyst for bearish trends\nin the cryptocurrency.",
+                "score": 5.2883
+            },
+            {
+                "text": "This is how\nthe biggest winners emerge, not by copying trends but by creating them.",
+                "score": 5.0463
+            },
+            {
+                "text": "The market\nrecovery may be indicated by this recent upward trend.",
+                "score": 4.8254
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-15T22:29:10.634419",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-16T18:51:55.765553",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-16T18:59:52.091511",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-16T19:12:10.282121",
+        "coin": "hamstercoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-16T19:12:13.737696",
+        "coin": "bitcoin",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-04-21T23:33:02.065904",
+        "coin": "cardano",
+        "query": "can i trade in this coin?",
+        "sentiment": "Neutral (Score: 0.28)",
+        "answers": [
+            {
+                "text": "- Bitcoin trades at $80,378, down 2.51%, with resistance at\n$85,000 and support at $78,000.",
+                "score": 5.9655
+            },
+            {
+                "text": "This has further instigated shifts in global trade\nrelationships.",
+                "score": 5.6794
+            },
+            {
+                "text": "It\nseems like meme coins are losing ground to utility-focused coins in 2025.",
+                "score": 5.2208
+            }
+        ]
+    }
+]
