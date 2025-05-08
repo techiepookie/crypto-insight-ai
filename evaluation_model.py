@@ -7,6 +7,91 @@ from sklearn.svm import SVC
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+import json
+import csv
+from sentence_transformers import SentenceTransformer, util
+
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+
+def load_data(file_path):
+    with open(file_path, 'r', encoding='utf-8') as a:
+        return json.load(a)
+
+def is_valid_entry(entry):
+    coin = entry.get('coin', '').lower()
+    query = entry.get('query', '')
+    answers = entry.get('answers', [])
+
+    
+    if coin == 'general crypto':  # If coin is general crypto always valid
+        return True
+
+   
+    if not query or not answers:   # If query or answers empty, invalid
+        return False
+
+    input_query = query.lower()
+    input_coin = coin.lower()
+
+
+
+    # Check if coin is in query
+    coin_in_query = input_coin in input_query
+
+
+    # Check if coin is in any answer text
+    coin_in_answers = any(input_coin in answer.get('text', '').lower() for answer in answers)
+
+    # Semantic similarity check between coin and answers
+    coin_embedding = model.encode(coin, convert_to_tensor=True)
+    answer_texts = [answer.get('text', '') for answer in answers]
+    answer_embeddings = model.encode(answer_texts, convert_to_tensor=True)
+    cosine_scores = util.cos_sim(coin_embedding, answer_embeddings)[0]
+
+
+
+    threshold = 0.6
+    similarity_valid = any(score >= threshold for score in cosine_scores)
+
+    # Validation logic combining keyword and semantic similarity
+    if coin_in_answers or similarity_valid:
+        if coin_in_query:
+            return True
+        else:
+            return True
+    else:
+        return False
+
+def save_results(results, csv_path):
+    with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow(['coin', 'query','status', 'answers'])
+        for coin, query, status, answers in results:
+            
+            # Extract first  'text' from each answer dict
+            answer_texts = [answer.get('text', '') for answer in answers]
+            text = answer_texts[0] if len(answer_texts) > 0 else ''
+            
+            # Format as single string with labels
+            answers_str = f"text: {text}" 
+            writer.writerow([coin, query, status,answers_str])
+
+def main():
+    data = load_data('query_logs.json')
+    results = []
+    for entry in data:
+        valid = is_valid_entry(entry)
+        status = 'valid' if valid else 'invalid'
+        # Save coin, query, status, and answers as is from JSON in correct order
+        results.append((entry.get('coin', ''), entry.get('query', ''), status, entry.get('answers', [])))
+    save_results(results, 'validation_results.csv')
+
+if __name__ == '__main__':
+    main()
+
+
 # === 1. Load Data ===
 vectorised_file = 'vectorised.csv'
 df = pd.read_csv(vectorised_file)
