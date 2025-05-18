@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoInsights | AI-Powered Crypto Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        primary: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            300: '#f0abfc',
+                            400: '#e879f9',
+                            500: '#d946ef',
+                            600: '#bc24c4',
+                            700: '#9d1d9d',
+                            800: '#831983',
+                            900: '#6b176b',
+                        },
+                        accent: {
+                            pink: '#ec4899',
+                            purple: '#bc24c4',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+       
+        .glass-card {
+            background: rgba(15, 15, 15, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(188, 36, 196, 0.2);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(188, 36, 196, 0.1) 0%, rgba(15, 15, 15, 0.8) 50%, rgba(188, 36, 196, 0.1) 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899 0%, #bc24c4 50%, #9d1d9d 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(188, 36, 196, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(188, 36, 196, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(188, 36, 196, 0);
+            }
+        }
+
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(188, 36, 196, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(188, 36, 196, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: relative;
+            overflow-x: hidden;
+            /* Only hide horizontal overflow */
+            overflow-y: auto;
+            /* Allow vertical scrolling */
+            min-height: 100%;
+        }
+
+        .grid-pattern::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23bc24c4" opacity="0.03"><circle cx="15" cy="15" r="3"/><circle cx="35" cy="25" r="2"/><circle cx="75" cy="15" r="4"/><circle cx="85" cy="65" r="3"/><circle cx="25" cy="85" r="2"/><circle cx="65" cy="75" r="3"/><circle cx="45" cy="45" r="2"/><circle cx="85" cy="25" r="3"/><circle cx="15" cy="65" r="4"/><circle cx="55" cy="35" r="2"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23bc24c4" opacity="0.03"><path d="M10,10 L90,10 L90,90 L10,90 Z" stroke-width="2"/><path d="M30,30 L70,30 L70,70 L30,70 Z" stroke-width="1"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23bc24c4" opacity="0.03"><polygon points="50,5 90,90 10,90"/><polygon points="50,30 70,70 30,70"/></svg>');
+            background-size: 100px 100px, 150px 150px, 120px 120px;
+            background-repeat: repeat;
+            z-index: -1;
+        }
+
+        .search-box {
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus-within {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(188, 36, 196, 0.3);
+        }
+
+        .insight-card {
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .insight-card.visible {
+            opacity: 1;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(188, 36, 196, 0.2);
+        }
+
+        .typewriter {
+            border-right: 2px solid #bc24c4;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .coin-card {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .coin-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .price-up {
+            color: #10b981;
+        }
+
+        .price-down {
+            color: #ef4444;
+        }
+
+        .section-title {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-crypto {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 15s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        .market-movement {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .market-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(188, 36, 196, 0.5), transparent);
+            animation: marketPulse 8s infinite;
+        }
+
+        @keyframes marketPulse {
+
+            0%,
+            100% {
+                transform: scaleX(0.8);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scaleX(1.2);
+                opacity: 1;
+            }
+        }
+
+        .market-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #bc24c4;
+            animation: dotPulse 2s infinite;
+        }
+
+        @keyframes dotPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+        }
+
+        .glow-effect {
+            position: relative;
+        }
+
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(188, 36, 196, 0.2) 0%, transparent 70%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glow-effect:hover::after {
+            opacity: 1;
+        }
+
+        .token-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(188, 36, 196, 0.1);
+            border: 1px solid rgba(188, 36, 196, 0.3);
+        }
+
+        .token-icon i {
+            font-size: 18px;
+            color: #bc24c4;
+        }
+
+        .trending-card {
+            transition: all 0.3s ease;
+            background: rgba(15, 15, 15, 0.4);
+            border: 1px solid rgba(188, 36, 196, 0.1);
+        }
+
+        .trending-card:hover {
+            transform: translateY(-5px);
+            background: rgba(15, 15, 15, 0.6);
+            border-color: rgba(188, 36, 196, 0.3);
+            box-shadow: 0 10px 20px rgba(188, 36, 196, 0.1);
+        }
+
+        .news-card {
+            transition: all 0.3s ease;
+            background: rgba(15, 15, 15, 0.4);
+            border: 1px solid rgba(188, 36, 196, 0.1);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            background: rgba(15, 15, 15, 0.6);
+            border-color: rgba(188, 36, 196, 0.3);
+            box-shadow: 0 10px 20px rgba(188, 36, 196, 0.1);
+        }
+
+        /* Enhanced crypto grid elements */
+        .crypto-grid-element {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.08;
+            animation: float 25s linear infinite;
+        }
+
+        .crypto-grid-element:nth-child(1) {
+            top: 10%;
+            left: 15%;
+            font-size: 3rem;
+            animation-delay: 0s;
+        }
+
+        .crypto-grid-element:nth-child(2) {
+            top: 25%;
+            right: 20%;
+            font-size: 2.5rem;
+            animation-delay: 5s;
+        }
+
+        .crypto-grid-element:nth-child(3) {
+            top: 50%;
+            left: 5%;
+            font-size: 4rem;
+            animation-delay: 10s;
+        }
+
+        .crypto-grid-element:nth-child(4) {
+            bottom: 15%;
+            right: 10%;
+            font-size: 3.5rem;
+            animation-delay: 15s;
+        }
+
+        .crypto-grid-element:nth-child(5) {
+            top: 70%;
+            right: 25%;
+            font-size: 2rem;
+            animation-delay: 20s;
+        }
+
+        .crypto-grid-element:nth-child(6) {
+            top: 30%;
+            left: 30%;
+            font-size: 3rem;
+            animation-delay: 25s;
+        }
+
+        /* New crypto chart section */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.4);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .chart-line {
+            position: absolute;
+            bottom: 50%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(188, 36, 196, 0.7), transparent);
+        }
+
+        .chart-point {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #bc24c4;
+            transform: translate(-50%, -50%);
+        }
+
+        /* New crypto comparison section */
+        .comparison-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #bc24c4, #9d1d9d);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.1) 0%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0.1) 100%);
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Confusion Matrix Styles */
+
+        .card {
+            background: rgba(15, 15, 15, 0);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(188, 36, 196, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            height: 300px;
+            width: 400px;
+        }
+
+        #confusion-matrix {
+            position: relative;
+            border-collapse: separate;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            font-size: 1rem;
+        }
+
+        #confusion-matrix th,
+        #confusion-matrix td {
+            padding: 12px 15px;
+            border-radius: 20px;
+        }
+
+        #confusion-matrix thead th h1 {
+            background: linear-gradient(90deg, #ec4899 0%, #bc24c4 50%, #9d1d9d 100%);
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        h1#PV {
+            text-align: center;
+            margin: 0 auto;
+            background: linear-gradient(90deg, #ec4899 0%, #bc24c4 50%, #9d1d9d 100%);
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            padding: 10px 0;
+            width: 75%;
+        }
+
+        h1#act {
+            position: absolute;
+            left: -65px;
+            top: 55%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: center;
+            text-align: center;
+            margin: 0 auto;
+            background: linear-gradient(90deg, #ec4899 0%, #bc24c4 50%, #9d1d9d 100%);
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            padding: 10px 20px;
+            width: 50%;
+        }
+
+        #confusion-matrix tbody th {
+            background-color: #2a2a2a;
+            color: #bc24c4;
+            font-weight: 700;
+        }
+
+        
+        #tp,
+        #fn,
+        #fp,
+        #tn {
+            width: 120px;
+            height: 100px;
+            border: hidden;
+            border-radius: 12px;
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+
+        /* paragraph style */
+        .myParagraph {
+            margin-bottom: 10px;
+            padding: 0 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            width: auto;
+            position: relative;
+        }
+        #stylo{
+            margin-left: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body class="grid-pattern">
+    <!-- Enhanced Crypto Grid Elements -->
+    <div class="crypto-grid-element">
+        <i class="fab fa-bitcoin"></i>
+    </div>
+    <div class="crypto-grid-element">
+        <i class="fab fa-ethereum"></i>
+    </div>
+    <div class="crypto-grid-element">
+        <i class="fas fa-chart-line"></i>
+    </div>
+    <div class="crypto-grid-element">
+        <i class="fas fa-coins"></i>
+    </div>
+    <div class="crypto-grid-element">
+        <i class="fas fa-wallet"></i>
+    </div>
+    <div class="crypto-grid-element">
+        <i class="fas fa-exchange-alt"></i>
+    </div>
+
+    <!-- Floating Crypto Elements -->
+    <div class="floating-crypto" style="top: 10%; left: 5%; animation-delay: 0s;">
+        <i class="fab fa-bitcoin text-4xl"></i>
+    </div>
+    <div class="floating-crypto" style="top: 20%; right: 8%; animation-delay: 3s;">
+        <i class="fab fa-ethereum text-3xl"></i>
+    </div>
+    <div class="floating-crypto" style="top: 50%; left: 7%; animation-delay: 5s;">
+        <i class="fas fa-chart-line text-2xl"></i>
+    </div>
+    <div class="floating-crypto" style="top: 70%; right: 10%; animation-delay: 7s;">
+        <i class="fas fa-coins text-3xl"></i>
+    </div>
+    <div class="floating-crypto" style="top: 30%; left: 12%; animation-delay: 10s;">
+        <i class="fas fa-wallet text-2xl"></i>
+    </div>
+
+    <!-- Animated Background Elements -->
+    <div class="fixed -left-20 -top-20 w-64 h-64 rounded-full bg-primary-900 opacity-20 blur-3xl -z-10"></div>
+    <div class="fixed -right-20 bottom-1/3 w=72 h-72 rounded-full bg-primary-800 opacity-20 blur-3xl -z-10"></div>
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <div>
+              <img src="logo.svg" alt="Logo" style="max-width: 80px; height: auto;">
+            </div>
+            <span class="text-xl font-bold gradient-text">CryptoSights</span>
+        </div>
+   
+
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Evaluation</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Documentation</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">FAQS</a>
+        </div>
+
+        <div class="flex items-center space-x=4">
+
+            <button
+                class="px-4 py-2 text-sm rounded-full bg-gradient-to-r from-primary-600 to-primary-400 text-white hover:opacity-90 transition-opacity">
+                Get Started
+            </button>
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div>
+        <!-- Left Side Menu Bar -->
+        <div id="sidebar" class=" h-full w-64   text-white flex flex-col transition-width duration-300 ease-in-out z-50"
+            style="float: left; ">
+            <!-- <div style="">Evaluation</div> -->
+
+            <!-- Toggle Button -->
+            <button id="toggleSidebar" class="p-4 focus:outline-none "
+                style="display: flex; justify-content: space-between;">
+                <div style="float: left; " class="font-bold text-3xl " id="h-eval">Evaluation</div>
+                <i id="toggleIcon"
+                    class="fas fa-angle-double-left text-primary-300 text-xl transition-transform duration-300"></i>
+            </button>
+
+            <!-- Menu Items -->
+            <nav class="flex flex-col flex-grow px-6 space-y-6 mt-4">
+
+                <a id="barBtn" class="flex items-center space-x-4 hover:text-primary-400 transition-colors" style="cursor: pointer">
+                    <i id="icon" class="fa-solid fa-chart-column text-2xl gradient-text"></i>
+                    <span id="text" class="font-semibold text-sm gradient-text">ACCURACY & ERRORS</span>
+                </a>
+                <a id="confBtn" class="flex items-center space-x-4 hover:text-primary-400 transition-colors" style="cursor: pointer">
+                    <i id="icon" class="fas fa-th-large text-2xl"></i>
+                    <span id="text" class="font-semibold text-sm">CONFUSION MATRIX</span>
+                </a>
+                <a id="lineBtn" class="flex items-center space-x-4 hover:text-primary-400 transition-colors" style="cursor: pointer">
+                    <i id="icon" class="fas fa-chart-line text-2xl"></i>
+                    <span id="text" class="font-semibold text-sm">PRECISION, RECALL & F1 SCORE</span>
+                </a>
+            </nav>
+
+        </div>
+        <!-- Main content wrapper to shift right when sidebar is expanded -->
+        <div id="mainContent" class="ml-64 transition-margin duration-300 ease-in-out">
+
+            <!-- Bar Chart -->
+            <div class="bar-chart-container"
+                style="display: flex; flex-direction: column; align-items: center; margin: 0 auto;">
+
+                <div>
+                    <div
+                        style="display: flex; width: 40vw; background-color: rgba(255, 255, 255, 0); justify-content: center; margin: 1rem 0 1rem 0;">
+                        <canvas id="barChart" style="background-color: #fbf5fb00;"></canvas>
+                    </div>
+                </div>
+
+                <div style="margin: 1rem 0 1rem 0;">
+                    <p class="myParagraph ">
+                        <strong><p style="text-align: center;"> Accuracy and Errors <br>
+                      Accuracy is a measure of how close a measured value is to the true or accepted value,
+                        while errors represent the difference between the measured and true values. Errors can
+                        be calculated using absolute error, relative error, or percent error formulas.
+                        Accuracy is one of the most basic and widely used metrics in classification tasks.
+                       It represents the ratio of correct predictions made by the model to the total number of predictions. </strong>
+                        <br></p>
+                Formula: <br> 
+                  <p id="stylo"> Accuracy = (TP + TN) / (TP + TN + FP + FN) <br></p>
+    
+                Where: <br>
+                <p id="stylo">TP: True Positives <br>
+                    TN: True Negatives <br>
+                    FP: False Positives <br>
+                    FN: False Negatives <br> <br></p>
+
+                       <strong> Errors help quantify how far off the model’s predictions are from the actual outcomes.
+                         This is essential when high accuracy might mask poor performance in imbalanced datasets.</strong>
+                            <br>
+                Types of Error: <br>
+     <p id="stylo"> 1. Absolute Error = |Predicted - Actual| <br>
+                    2. Relative Error = |Predicted - Actual| / |Actual| <br>
+                    3. Percent Error = (Absolute Error / Actual) * 100 </p>
+
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="confusion-matrix-container"
+                style=" display: none; flex-direction: column; align-items: center; margin: 0 auto;">
+
+                <div class="flex">
+                    <div class="card" style="background-color: #fbf5fb00;">
+                        <table id="confusion-matrix">
+                            <thead>
+                                <h1 id="PV">Predicted Value</h1>
+                                <h1 id="act">Actual Value</h1>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="tp" style="background-color: #bc24c4">
+                                        <p id="tpp">16</p> True Positive
+                                    </td>
+                                    <td id="fn" style="background-color: rgb(119, 119, 119);">
+                                        <p id="fnp">30</p> False Negative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="fp" style="background-color: rgb(119, 119, 119);">
+                                        <p id="fpp">10</p> False Positive
+                                    </td>
+                                    <td id="tn" style="background-color: #bc24c4;">
+                                        <p id="tnp">144</p> True Negative
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div style="margin: 1rem 0 1rem 0;">
+                    <p class="myParagraph"> <p style="text-align: center; ;"> <b> Confusion Matrix </b></p>
+                      <strong> A confusion matrix is a table used to evaluate the performance of
+                        a classification model. It visualizes the model's predictions
+                        against the actual outcomes, showing how well it correctly identifies
+                        different categories. It helps understand where the model makes mistakes
+                        and where it performs well.
+                        A Confusion Matrix is a performance measurement tool for classification problems.
+                         Unlike simple accuracy, it provides a granular view of the classification results 
+                         and highlights types of errors.</strong> <br> <br>
+
+Components: <br>
+<p id="stylo">- TP: Model predicted "Positive", and it was actually "Positive". <br>
+- FP: Model predicted "Positive", but it was "Negative". <br>
+- FN: Model predicted "Negative", but it was "Positive". <br>
+- TN: Model predicted "Negative", and it was actually "Negative".</p> <br> <br>
+
+ Importance of Confusion Matrix: <br>
+<p id="stylo">1. It allows class-wise analysis rather than an overall average. <br>
+2. Helps detect biases in the model . <br>
+3. It is essential for calculating precision, recall, specificity, and F1-score. </p>
+
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="line-chart-container"
+                style=" display:none; flex-direction: column; align-items: center; margin:  auto;">
+                <!-- Line Chart -->
+                <div style="display: flex; width: 40vw; justify-content: center; margin: 1rem 0 1rem 0;">
+                     <canvas id="lineChart" style="background-color: #00000052;  "></canvas> <!--#183d42; -->
+                </div>
+                <div style="margin: 1rem 0 1rem 0;">
+                    <p class="myParagraph"> <p style="text-align: center;"> <b> Line Chart </b></p>
+                      <strong> A line chart visualizing precision, recall, and F1-score typically
+                        shows how these metrics change over a range of values, often representing
+                        a model's performance at different thresholds or for varying data subsets.
+                        The X-axis usually represents the data or parameter being varied, while
+                        the Y-axis represents the value of each metric (precision, recall, and
+                        F1-score). This allows for easy comparison of how the model's performance
+                        changes with these variations. <br><br>
+                      
+Metric Definitions: <br>
+<p id="stylo">- Precision = TP / (TP + FP): How many predicted positives are actually correct? <br>
+- Recall = TP / (TP + FN): How many actual positives were captured? <br>
+- F1 Score = 2 * (Precision * Recall) / (Precision + Recall): Balances precision and recall. </p> <br><br>
+
+When and Why to Use: <br>
+<p id="stylo">- High precision + low recall = Model is conservative. <br>
+- High recall + low precision = Model detects more positives but includes false alarms. <br>
+- F1 Score = Balanced metric.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="eval_script.js"></script>
+
+    <!-- Your CODE ENDS HERE -->
+
+    <!-- Include the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
