@@ -1,0 +1,27 @@
+FROM python:3.10-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 🔥 NLTK resources baked into image
+RUN python - <<EOF
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+nltk.download('wordnet')
+EOF
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "run.py"]

@@ -17117,5 +17117,51 @@
                 "source_context": "Market Analysis"
             }
         ]
+    },
+    {
+        "timestamp": "2026-01-15T17:12:43.354468",
+        "coin": "general crypto",
+        "query": "How secure is blockchain technology?",
+        "sentiment": "Positive (Score: 0.60)",
+        "answers": [
+            {
+                "excerpt": "It is a decentralized system\nbased on blockchain technology, a distributed ledger that allows for secure and\ntransparent transactions. 2. Explain the concept of blockchain technology. a. Answer: Blockchain is a distributed ledger that records transactions in a secure and\ntransparent manner. It consists of blocks, each containing a batch of transactions,\nlinked together in a chronological chain...",
+                "confidence": 0.6,
+                "source_context": "Market Analysis"
+            },
+            {
+                "excerpt": "It reminded the capabilities of blockchain and calls users to\nembrace this innovative technology. Blockchain technology is known for its immutable and secure nature. But several blockchain hacks have succeeded\nin stealing financial assets from the robust blockchain networks. The recent Bybit hack is an example of how sophisticated hackers are stealing and\nlaundering funds on-chain...",
+                "confidence": 0.5,
+                "source_context": "Market Analysis"
+            },
+            {
+                "excerpt": "Its decentralized, transparent and secure nature sees\nblockchain technology offer industries, companies, and governments a new light into the digital future. With the advantages of blockchain being\nwitnessed across almost every industry, demand for blockchain ecosystems and protocols is at its peak.",
+                "confidence": 0.5,
+                "source_context": "Market Analysis"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-01-15T17:12:50.320168",
+        "coin": "dogecoin",
+        "query": "How secure is blockchain technology?",
+        "sentiment": "Positive (Score: 0.60)",
+        "answers": [
+            {
+                "excerpt": "It is a decentralized system\nbased on blockchain technology, a distributed ledger that allows for secure and\ntransparent transactions. 2. Explain the concept of blockchain technology. a. Answer: Blockchain is a distributed ledger that records transactions in a secure and\ntransparent manner. It consists of blocks, each containing a batch of transactions,\nlinked together in a chronological chain...",
+                "confidence": 0.6,
+                "source_context": "Market Analysis"
+            },
+            {
+                "excerpt": "It reminded the capabilities of blockchain and calls users to\nembrace this innovative technology. Blockchain technology is known for its immutable and secure nature. But several blockchain hacks have succeeded\nin stealing financial assets from the robust blockchain networks. The recent Bybit hack is an example of how sophisticated hackers are stealing and\nlaundering funds on-chain...",
+                "confidence": 0.5,
+                "source_context": "Market Analysis"
+            },
+            {
+                "excerpt": "Its decentralized, transparent and secure nature sees\nblockchain technology offer industries, companies, and governments a new light into the digital future. With the advantages of blockchain being\nwitnessed across almost every industry, demand for blockchain ecosystems and protocols is at its peak.",
+                "confidence": 0.5,
+                "source_context": "Market Analysis"
+            }
+        ]
     }
 ]
